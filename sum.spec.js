@@ -8,4 +8,8 @@ describe("sum.js", () => {
   it("deve retornar -1 quando somar -2 + 1", () => {
     expect(soma(-2, 1)).toBe(-1);
   });
+
+  it("deve lançar um erro quando somar 'a' + 1", () => {
+    expect(() => soma("a", 1)).toThrow("Os parametros devem ser números");
+  });
 });
